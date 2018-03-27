@@ -1,4 +1,4 @@
-# kim_cnn
+# Text classification
 
 Implementation for Some pupular machine learning algorithms for text classification.
 This project is partly based castorini's work on https://github.com/castorini/Castor. 
@@ -28,13 +28,7 @@ MR | 74.5 | 81.93  | 81.74 | 82.87
 SST1 | 41.27 | 45.25 |47.00  |47.15 
 SST2 |  |83.20 |84.56  |85.72 
 TREC | 92.6 | 93.00 | 93.6 | 93.4
-For LSTM
-Dataset | `rand` | `static` | `nonstatic` 
---- | --- | --- | --- | ---
-MR |75.74  | 81.64 |82.69  | 
-SST1 |43.48  |47.82  | 49.00 | 
-SST2 | 80.50 |  82.92|85.77  | 
-TREC | 87.8 | 92.80 | 93.8
+
 
 ## TODO
 
