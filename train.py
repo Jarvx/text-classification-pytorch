@@ -9,7 +9,6 @@ from torchtext import data
 from args import get_args
 from model import KimCNN
 from model import LSTM
-from model import ATreeRNN
 from dataset import SST1Dataset
 from dataset import MRDataset
 from utils import clean_str_sst,clean_str
@@ -111,9 +110,9 @@ if args.resume_snapshot:
     else:
         model = torch.load(args.resume_snapshot, map_location=lambda storage, location: storage)
 else:
-    #model = KimCNN(config)
+    model = KimCNN(config)
     #model=LSTM(config.embed_num,config.embed_dim,200,len(LABEL.vocab),args.mode)
-    model=ATreeRNN(config.embed_num,config.embed_dim,200,len(LABEL.vocab),args.mode)
+ 
     
     model.static_embed.weight.data.copy_(TEXT.vocab.vectors)
     model.non_static_embed.weight.data.copy_(TEXT.vocab.vectors)
