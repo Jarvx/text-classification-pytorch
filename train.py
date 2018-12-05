@@ -122,10 +122,7 @@ else:
 
 
 parameter = filter(lambda p: p.requires_grad, model.parameters())
-#for idx, p in enumerate(parameter):
-#    print(idx, p)
 optimizer = torch.optim.Adadelta(parameter, lr=args.lr, weight_decay=args.weight_decay)
-#optimizer = torch.optim.Adamax(parameter)
 
 criterion = nn.CrossEntropyLoss()
 early_stop = False
